@@ -22,7 +22,7 @@ function App() {
 				updates every 10 seconds
       </div>
       <div className='mt-4 grid gap-4 md:grid-cols-2'>
-        {lineData.map((tube) => (
+        {lineData.length && lineData.map((tube) => (
 					<ServiceStatus
 						key={tube.id}
 						lineId={tube.id}
@@ -30,6 +30,10 @@ function App() {
 						status={tube.lineStatuses[0].statusSeverityDescription}
 					></ServiceStatus>
         ))}
+				{!lineData.length &&
+					<div className='text-sm text-red'>
+						Error loading data. Will try to load again automatically after 10 seconds.
+					</div>}
       </div>
     </div>
   );

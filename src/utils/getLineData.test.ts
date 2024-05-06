@@ -6,16 +6,16 @@ beforeEach(() => {
 
 test('returns line data if API call succeeds', async () => {
 	const mockLineData = [{
-		id: "bakerloo",
-		name: "Bakerloo",
-		modeName: "tube",
-		created: "2024-04-30T17:19:22.673Z",
-		modified: "2024-04-30T17:19:22.673Z",
+		id: 'bakerloo',
+		name: 'Bakerloo',
+		modeName: 'tube',
+		created: '2024-04-30T17:19:22.673Z',
+		modified: '2024-04-30T17:19:22.673Z',
 		lineStatuses: [
 			{
 				id: 0,
 				statusSeverity: 10,
-				statusSeverityDescription: "Good Service",
+				statusSeverityDescription: 'Good Service',
 			}
 		]
 	}];
